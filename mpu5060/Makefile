@@ -28,4 +28,9 @@ all:
 clean:
 	$(MAKE) -C $(KERNELDIR) M=$(CURDIR) clean
 
+dtb:
+	cp sun8i-h3-orangepi-one.dts $(KERNELDIR)/arch/arm/boot/dts/
+	$(MAKE) -C $(KERNELDIR) M=$(CURDIR) dtbs
+
+
 endif
